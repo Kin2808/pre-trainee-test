@@ -1,0 +1,350 @@
+@import "base";
+@import "color";
+
+.container {
+  position: relative;
+  padding: 54px 246px;
+
+  .rounded {
+    position: absolute;
+    right: -100px;
+    top: -200px;
+    width: 976px;
+    height: 976px;
+    border-radius: 100%;
+    background-color: $main;
+    z-index: -1;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      .menu-text {
+        display: flex;
+        gap: 50px;
+        a {
+          font-weight: 700;
+        }
+      }
+
+      .input-menu {
+        display: flex;
+        position: relative;
+
+        input {
+          padding: 16px 20px;
+          border-radius: 21px;
+          border: 3px solid;
+          width: 243px;
+          height: 43px;
+
+          &::placeholder {
+            font-style: italic;
+          }
+        }
+
+        .icon-input-menu {
+          position: absolute;
+          right: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 21px;
+        }
+      }
+
+      .icon-menu {
+        position: relative;
+
+        i {
+          font-size: 24px;
+        }
+
+        .icon-menu-number {
+          position: absolute;
+          top: -15px;
+          right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $red;
+          border-radius: 50%;
+          padding: 5px;
+          width: 20px;
+          height: 20px;
+          color: white;
+          font-size: 13px;
+          font-weight: 700;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  .section1 {
+    margin-top: 106px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    .section1-content {
+      display: flex;
+      flex-direction: column;
+      max-width: 350px;
+      h2 {
+        font-size: 70px;
+        font-weight: 900;
+        margin-bottom: 55px;
+      }
+
+      p {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+
+      h3 {
+        font-size: 30px;
+        font-weight: 900;
+      }
+
+      button {
+        margin-top: 106px;
+        padding: 38px;
+        background-color: $main;
+      }
+    }
+  }
+
+  .section2 {
+    display: flex;
+    gap: 122px;
+    margin-top: 210px;
+
+    .section2-content-title {
+      display: inline-block;
+      border-bottom: 3px solid;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 54px;
+      font-weight: 900;
+      margin: 46px 0px;
+    }
+
+    button {
+      margin-top: 77px;
+      padding: 37px 60px;
+      background-color: $main;
+    }
+  }
+
+  .section3 {
+    position: relative;
+    margin-top: 226px;
+
+    .section3-rounded {
+      padding: 0;
+      position: absolute;
+      left: -60%;
+      top: -15%;
+      width: 978px;
+      height: 978px;
+      border-radius: 100%;
+      background-color: $main;
+      z-index: -1;
+    }
+
+    h1 {
+      font-size: 54px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .section3-content {
+      margin-top: 130px;
+      display: flex;
+      gap: 50px;
+
+      .section3-content-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .section3-content-img {
+          position: relative;
+          img {
+            height: 545px;
+          }
+          p {
+            position: absolute;
+            top: 15px;
+            left: 16px;
+            border-bottom: 3px solid;
+            font-weight: 700;
+          }
+        }
+
+        h3 {
+          margin-top: 44px;
+          font-size: 25px;
+          font-weight: 700;
+        }
+
+        .price {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          margin-top: 5px;
+
+          .old-price {
+            color: $red;
+            text-decoration: line-through;
+          }
+
+          .old-price,
+          .new-price {
+            font-weight: 700;
+          }
+
+          .new-price {
+            border-right: 1px solid;
+            padding-right: 10px;
+          }
+
+          .delivery {
+            padding-left: 10px;
+          }
+
+          .icon {
+            font-size: 13px;
+          }
+        }
+
+        button {
+          margin-top: 47px;
+          background-color: $main;
+          padding: 37px 50px;
+        }
+      }
+    }
+  }
+
+  .section4 {
+    margin-top: 178px;
+    font-weight: 900;
+    img {
+      object-fit: fill;
+    }
+    .item-content {
+      position: absolute;
+      top: 0;
+      opacity: 0.8;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h3 {
+        font-size: 32px;
+        max-width: 200px;
+        text-align: center;
+      }
+      p {
+        border-bottom: 3px solid;
+        margin-top: 20px;
+      }
+    }
+    .section4-grid1 {
+      display: grid;
+      gap: 30px;
+      grid-template-areas: "a a b b" "a a c c";
+
+      .item1 {
+        position: relative;
+        grid-area: a;
+        max-height: 530px;
+        .item1-content {
+          background-color: $orange;
+        }
+      }
+      .item2 {
+        position: relative;
+        grid-area: b;
+        max-height: 250px;
+        .item2-content {
+          background-color: $pink;
+        }
+      }
+      .item3 {
+        position: relative;
+        grid-area: c;
+        max-height: 250px;
+        .item3-content {
+          background-color: $purple;
+        }
+      }
+    }
+
+    .section4-grid2 {
+      display: grid;
+      grid-template-columns: 30% 68%;
+      margin-top: 30px;
+      gap: 27px;
+
+      .item4 {
+        position: relative;
+        height: 383px;
+        .item4-content {
+          background-color: $black;
+          color: white;
+        }
+      }
+
+      .item5 {
+        position: relative;
+        height: 383px;
+        .item5-content {
+          background-color: $blue;
+        }
+      }
+    }
+  }
+
+  .section5 {
+    margin-top: 166px;
+    padding: 156px 0px;
+    background-color: $gray-bg;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 60px;
+
+    .section5-content {
+      h2 {
+        font-size: 54px;
+        margin-bottom: 60px;
+      }
+    }
+
+    form {
+      .input-form {
+        input {
+          border: none;
+          border-bottom: 1px solid #a6a9ab;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
